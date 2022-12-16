@@ -11,3 +11,6 @@
 - [Go Concurrency Patterns: Pipelines and cancellation](https://go.dev/blog/pipelines)
 - [Paper: Communicating Sequential Processes, Hoare, 1987](https://www.cs.cmu.edu/~crary/819-f09/Hoare78.pdf)
 - [Amdahl's Law](https://en.wikipedia.org/wiki/Amdahl%27s_law)
+
+### Illustrations
+[MariaLetta - Free Gophers Pack](https://github.com/MariaLetta/free-gophers-pack)
