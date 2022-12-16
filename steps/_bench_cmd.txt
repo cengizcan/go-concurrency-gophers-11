@@ -1,0 +1,20 @@
+# install benchstat:
+# go install golang.org/x/perf/cmd/benchstat
+
+# Step 2
+go test -timeout 50s -benchmem -run=^$ -bench ^BenchmarkStatS2$ > _s2_old.out
+go test -timeout 50s -benchmem -run=^$ -bench ^BenchmarkStatS2$ > _s2_new.out
+benchstat _s2_old.out _s2_new.out > _s2_benchstat.out
+
+# Step 3
+go test -timeout 50s -benchmem -run=^$ -bench ^BenchmarkStatS3$ > _s3_old.out
+go test -timeout 50s -benchmem -run=^$ -bench ^BenchmarkStatS3$ > _s3_new.out
+benchstat _s3_old.out _s3_new.out > _s3_benchstat.out
+
+# Step 6
+go test -timeout 300s -benchmem -run=^$ -bench ^BenchmarkStatS6$ > _s6_old.out
+go test -timeout 300s -benchmem -run=^$ -bench ^BenchmarkStatS6$ > _s6_new.out
+benchstat _s6_old.out _s6_new.out > _s6_benchstat.out
+
+
+go test -timeout 300s -benchmem -run=^$ -bench ^Benchmark8_$ > _s8.out
