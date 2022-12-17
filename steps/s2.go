@@ -15,6 +15,7 @@ type ProcessResponse struct {
 	Written int
 	err     error
 }
+
 type ProcessImage func(name string, num numerator.Sequential) *ProcessResponse
 
 func ProcessImageS2(name string, num numerator.Sequential) *ProcessResponse {

@@ -36,9 +36,11 @@ func externalCompress(svc string) Compressor {
 
 func Compress(src []byte) *CompResult {
 	result := make(chan *CompResult)
+
 	for _, comp := range services {
 		go func(compress Compressor) {
 			res := compress(src)
+
 			select {
 			case result <- res:
 			default:
@@ -57,6 +59,7 @@ func compressWithDone(quit chan bool, compress Compressor, src []byte, result ch
 		response <- compress(src)
 		//response, err <- compress(src)
 	}()
+
 	select {
 	case result <- <-response:
 		// equal to:
@@ -65,11 +68,9 @@ func compressWithDone(quit chan bool, compress Compressor, src []byte, result ch
 	case <-quit:
 		return
 	}
-
 }
 
 func Compress2(src []byte) *CompResult {
-
 	quit := make(chan bool, 1)
 	result := make(chan *CompResult)
 

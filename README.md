@@ -1,5 +1,7 @@
 # Ankara Gophers #11: Applied Go Concurrency Patterns
+![Ankara Gophers #11 Banner](/ankara-gohers-11-banner.png)
 
+> [🎬 The presentation PDF](/Applied%20Go%20Concurrency%20Patterns.pdf)
 ## References
 - [Video: Google I/O 2012 - Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
 - [Video: Google I/O 2013 - Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw)
